@@ -1,6 +1,8 @@
 //Abir Ahmed
 package Items;
 
+import People.Person;
+
 /**
  * Health Potion; can be consumed or collected.
  */
