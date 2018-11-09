@@ -1,6 +1,8 @@
 //Abir Ahmed
 package Items;
 
+import People.Person;
+
 /**
  * Intellect Potion; can be consumed or collected.
  */
@@ -20,7 +22,7 @@ public class IntellectPotion extends Item  implements Potion{
      * Restores Peron's Intellect.
      */
     public void drink (Person p) {
-        p.setHealth(10);
+        p.setIntellect(100);
     }
 
     @Override
