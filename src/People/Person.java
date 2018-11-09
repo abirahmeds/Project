@@ -1,7 +1,7 @@
 //Abir Ahmed
 package People;
 
-import Rooms.Room
+import Rooms.Roomcell
 /**
  * Person represents the player as they move through the game.
  */
