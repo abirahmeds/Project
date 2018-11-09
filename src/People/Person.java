@@ -1,6 +1,7 @@
 //Abir Ahmed
 package People;
 
+import Rooms.Room
 /**
  * Person represents the player as they move through the game.
  */
@@ -95,7 +96,7 @@ public class Person {
     }
 
    
-    public void pickUp(Entity item) {
+    public void pickUp(Item item) {
         for (int i = 0; i < inventory.length; i++) {
             if (inventory[i] == null) {
                 inventory[i] = item; //place picked up item at next available position in inventory array
@@ -105,8 +106,8 @@ public class Person {
     }
 
    
-    public void drop(int pos, Cell cell) {
-        cell.addEntity(inventory[pos]); //adds item from inventory to cell
+    public void drop(int pos, Room room) {
+        room.addEntity(inventory[pos]); //adds item from inventory to cell
         inventory[pos] = null; //removes item from inventory
     }
 
