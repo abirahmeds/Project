@@ -1,6 +1,8 @@
 //Abir Ahmed
 package Items;
 
+import People.Person;
+
 /**
  * Mushroom Item; can be eaten or collected.
  */
@@ -25,15 +27,15 @@ public class Mushroom extends Entity  implements Food{
      */
     public void eat (Person p) {
         if (!poisonous) {
-            p.setHealth(p.getHealth() + 10);
-            p.setStamina(p.getStamina() + 10);
-            p.setNutrition(p.getNutrition() + 4);
-            p.setHydration(p.getHydration() + 4);
+            p.setHealth(p.getHealth() + 20);
+            p.setEndurance(p.getEndurance() + 20);
+            p.setStrength(p.getStrength() + 20);
+            p.setIntellect(p.getIntellect() + 20);
         } else {
-            p.setHealth(p.getHealth() - 10);
-            p.setStamina(p.getStamina() - 10);
-            p.setNutrition(p.getNutrition() + 4);
-            p.setHydration(p.getHydration() + 4);
+            p.setHealth(p.getHealth() - 20);
+            p.setEndurance(p.getEndurance() - 10);
+            p.setStrength(p.getStrength() - 10);
+            p.setIntellect(p.getIntellect() - 20);
         }
     }
 
