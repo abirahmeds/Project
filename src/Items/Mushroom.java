@@ -4,7 +4,7 @@ package Items;
 /**
  * Mushroom Entity; can be eaten or collected.
  */
-public class Mushroom extends Entity  implements Consumable{
+public class Mushroom extends Entity  implements Food{
     private boolean poisonous;
 
     /**
