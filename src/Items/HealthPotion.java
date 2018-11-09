@@ -22,7 +22,7 @@ public class HealthPotion extends Item  implements Potion{
      * Restores Peron's Health.
      */
     public void drink (Person p) {
-        p.setHealth(10);
+        p.setHealth(100);
     }
 
     @Override
