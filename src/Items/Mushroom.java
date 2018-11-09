@@ -2,7 +2,7 @@
 package Items;
 
 /**
- * Mushroom Entity; can be eaten or collected.
+ * Mushroom Item; can be eaten or collected.
  */
 public class Mushroom extends Entity  implements Food{
     private boolean poisonous;
@@ -25,20 +25,20 @@ public class Mushroom extends Entity  implements Food{
      */
     public void eat (Person p) {
         if (!poisonous) {
-            p.restoreHealth(1);
-            p.restoreStamina(1);
-            p.restoreNutrition(2);
-            p.restoreHydration(2);
+            p.setHealth(p.getHealth() + 10);
+            p.setStamina(p.getStamina() + 10);
+            p.setNutrition(p.getNutrition() + 4);
+            p.setHydration(p.getHydration() + 4);
         } else {
-            p.restoreHealth(0);
-            p.restoreStamina(0);
-            p.restoreNutrition(0);
-            p.restoreHydration(0);
+            p.setHealth(p.getHealth() - 10);
+            p.setStamina(p.getStamina() - 10);
+            p.setNutrition(p.getNutrition() + 4);
+            p.setHydration(p.getHydration() + 4);
         }
     }
 
     @Override
     public String toString() {
-        return ("Mushroom");
+        return ("Unidentified Mushroom");
     }
 }
