@@ -1,0 +1,30 @@
+//Abir Ahmed
+package Items;
+
+/**
+ * Stamina Potion; can be consumed or collected.
+ */
+public class StaminaPotion extends Item  implements Potion{
+    
+    /**
+     * Main Constructor
+     * @param x position of the Mushroom along the x Axis. (Row)
+     * @param y position of the Mushroom along the y Axis. (Column)
+     */
+    public StaminaPotion(int x,  int y) {
+        super(x, y);
+    }
+
+    @Override
+    /**
+     * Restores Peron's Stamina.
+     */
+    public void drink (Person p) {
+        p.setHealth(10);
+    }
+
+    @Override
+    public String toString() {
+        return ("Stamina Potion");
+    }
+}
