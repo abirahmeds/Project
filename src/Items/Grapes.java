@@ -1,6 +1,8 @@
 //Abir Ahmed
 package Items;
 
+import People.Person;
+
 /**
  * Grapes Item; can be eaten or collected.
  */
@@ -25,15 +27,15 @@ public class Grapes extends Item  implements Food{
      */
     public void eat (Person p) {
         if (numInBunch < 3) {
-            p.setHealth(p.getHealth() + 2);
-            p.setStamina(p.getStamina() + 2);
-            p.setNutrition(p.getNutrition() + 2);
-            p.setHydration(p.getHydration() + 2);
+            p.setHealth(p.getHealth() + 20);
+            p.setEndurance(p.getEndurance() + 20);
+            p.setStrength(p.getStrength() + 20);
+            p.setIntellect(p.getIntellect() + 20);
         } else {
-            p.setHealth(p.getHealth() + 5);
-            p.setStamina(p.getStamina() + 5);
-            p.setNutrition(p.getNutrition() + 5);
-            p.setHydration(p.getHydration() + 5);
+            p.setHealth(p.getHealth() + 50);
+            p.setEndurance(p.getEndurance() + 50);
+            p.setStrength(p.getStrength() + 50);
+            p.setIntellect(p.getIntellect() + 50);
         }
     }
 
